@@ -1,0 +1,2 @@
+# DAA-lab
+linear Search 
