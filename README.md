@@ -1,2 +1,24 @@
 # DAA-lab
-linear Search 
+//recursive function to perform linear search
+int linearSearch(int arr[],int size, int target,int index){
+if(index >= size){
+return -1;
+}
+if(arr[index] == target){
+return index;
+}
+return linearSearch(arr,size,target,index+=1);
+}
+int main(){
+int arr[] = {4,8,15,23,42};
+int size = sizeof(arr);
+int target = 23;
+int result = linearSearch(arr,size,target,0);
+if(result == -1){
+printf("Element %d not found in the array\n",target);
+}
+else{
+printf("Element %d found at index %d\n",target,result);
+}
+return 0;
+}
